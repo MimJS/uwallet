@@ -1,5 +1,5 @@
 import { RouteObject } from "react-router-dom";
-import { LoaderPage } from "../pages";
+import { HomePage, LoaderPage } from "../pages";
 
 export const PATHS = {
   LOADER: "/",
@@ -11,5 +11,9 @@ export const ROUTES: RouteObject[] = [
   {
     path: PATHS.LOADER,
     element: <LoaderPage />,
+  },
+  {
+    path: PATHS.HOME,
+    element: <HomePage />,
   },
 ];
