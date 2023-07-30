@@ -1,0 +1,8 @@
+.centered {
+  display: flex;
+  align-items: center;
+}
+
+.centered > svg {
+  margin-left: 2px;
+}

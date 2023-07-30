@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Panel, Placeholder, View } from "@vkontakte/vkui";
 import { Icon56WifiOutline } from "@vkontakte/icons";
 
-import { PATHS } from "../../router/router.config";
+import { createNavigationPath } from "../../router/router.utils";
 
 import styles from "./Loader.module.css";
 
@@ -14,9 +14,9 @@ export const LoaderPage: FC = () => {
   useEffect(() => {
     // FIXME: kostil' remove it
     setTimeout(() => {
-      navigate(PATHS.HOME);
+      navigate(createNavigationPath("MAIN", "HOME"));
     }, 1000);
-  }, []);
+  }, [navigate]);
 
   return (
     <View activePanel="loaderPanel">

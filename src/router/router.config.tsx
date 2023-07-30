@@ -1,11 +1,25 @@
 import { RouteObject } from "react-router-dom";
-import { HomePage, LoaderPage } from "../pages";
+import { LoaderPage } from "../pages";
+
+import { MainPageWrapper } from "../wrappers";
+
+export const MULTY_PATHS = {
+  MAIN: "/main/:activeTabbar",
+} as const;
 
 export const PATHS = {
   LOADER: "/",
-  HOME: "/home",
+  MAIN: "/main",
   PROFILE: "/profile",
-};
+} as const;
+
+export const PATHS_SUB = {
+  MAIN: {
+    HOME: "home",
+    MENU: "menu",
+    PAYMENTS: "payments",
+  },
+} as const;
 
 export const ROUTES: RouteObject[] = [
   {
@@ -13,7 +27,14 @@ export const ROUTES: RouteObject[] = [
     element: <LoaderPage />,
   },
   {
-    path: PATHS.HOME,
-    element: <HomePage />,
+    path: MULTY_PATHS.MAIN,
+    element: <MainPageWrapper />,
   },
 ];
+
+// Types:
+
+export type multyPathsKeyNames = keyof typeof MULTY_PATHS;
+export type pathsKeyNames = keyof typeof PATHS;
+
+export type subPathsKeyNames = keyof (typeof PATHS_SUB)["MAIN"];
