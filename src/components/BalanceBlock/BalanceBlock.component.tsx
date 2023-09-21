@@ -48,15 +48,15 @@ export const BalanceBlock: FC<BalanceBlockProps> = ({
     >
       {SIZES_WITH_TITLE.includes(size) ? (
         <div className={styles.title}>
-          <span className={styles.title__in}>Баланс:</span>
+          <span className={styles.title__in}>баланс:</span>
         </div>
       ) : null}
 
       <div className={styles.count}>
         <div className={styles.count__text}>
           <span className={styles.count__in}>{formatNumber(children)}</span>
+          <CoinIcon className={styles.count__icon} />
         </div>
-        <CoinIcon className={styles.count__icons} />
       </div>
 
       {actions && actions.length > 0 ? (
