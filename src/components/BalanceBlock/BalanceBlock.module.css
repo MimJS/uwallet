@@ -1,25 +1,26 @@
-.title, .count {
-    text-align: center;
+.title,
+.count {
+  text-align: center;
 }
 
 .title__in {
-    color: var(--vkui--color_text_secondary);
+  color: var(--vkui--color_text_secondary);
 }
 
 .count__icon {
-    width: 28px;
-    height: 28px;
-    margin-left: 8px;
-    margin-top: 4px;
+  width: 28px;
+  height: 28px;
+  margin-left: 8px;
+  margin-top: 4px;
 }
 
 .count__text {
-    display: inline-flex;
-    align-items: center;
-    margin-top: 3px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 3px;
 }
 
-.count__in { 
- font-size: 32px;
- font-weight: 500;
+.count__in {
+  font-size: 32px;
+  font-weight: 500;
 }
