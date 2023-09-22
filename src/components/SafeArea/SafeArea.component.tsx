@@ -1,13 +1,18 @@
+import cx from "classnames";
 import { FC } from "react";
 
 import { SafeAreaProps } from "./SafeArea.props";
 
 import styles from "./SafeArea.module.css";
 
-export const SafeArea: FC<SafeAreaProps> = ({ paddings, children }) => {
+export const SafeArea: FC<SafeAreaProps> = ({
+  paddings,
+  children,
+  className,
+}) => {
   return (
     <div
-      className={styles.wrapper}
+      className={cx(styles.wrapper, className)}
       style={{
         padding: paddings,
       }}

@@ -1,5 +1,5 @@
 import { RouteObject } from "react-router-dom";
-import { LoaderPage } from "../pages";
+import { LoaderPage, PinAuthPage } from "../pages";
 
 import { MainPageWrapper } from "../wrappers";
 
@@ -11,6 +11,7 @@ export const PATHS = {
   LOADER: "/",
   MAIN: "/main",
   PROFILE: "/profile",
+  PIN_AUTH: "/pinAuth",
 } as const;
 
 export const PATHS_SUB = {
@@ -29,6 +30,10 @@ export const ROUTES: RouteObject[] = [
   {
     path: MULTY_PATHS.MAIN,
     element: <MainPageWrapper />,
+  },
+  {
+    path: PATHS.PIN_AUTH,
+    element: <PinAuthPage />,
   },
 ];
 

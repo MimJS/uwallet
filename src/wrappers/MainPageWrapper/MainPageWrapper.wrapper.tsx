@@ -3,8 +3,7 @@ import { FC } from "react";
 import { useParams } from "react-router-dom";
 import { MainTabbar } from "../../components";
 import { PATHS_SUB } from "../../router/router.config";
-import { HomePage } from "../../pages";
-import { MorePage } from "../../pages/More";
+import { HomePage, MorePage } from "../../pages";
 
 export const MainPageWrapper: FC = () => {
   const { activeTabbar } = useParams();

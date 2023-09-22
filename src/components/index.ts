@@ -5,3 +5,4 @@ export * from "./MainTabbar";
 export * from "./BalanceBlock";
 export * from "./PalletBlock";
 export * from "./GapBlock";
+export * from "./Keyboard";

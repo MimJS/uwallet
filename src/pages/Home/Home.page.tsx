@@ -1,11 +1,12 @@
 import { FC } from "react";
 
-import { Icon12ChevronOutline } from "@vkontakte/icons";
+import { Icon12ChevronOutline, Icon24LockOutline } from "@vkontakte/icons";
 import {
   Avatar,
+  IconButton,
   Panel,
   PanelHeader,
-  PanelHeaderContent,
+  SimpleCell,
   View,
 } from "@vkontakte/vkui";
 
@@ -19,18 +20,24 @@ export const HomePage: FC<ViewPageWithId> = ({ id }) => {
   return (
     <View activePanel="homePanel" id={id}>
       <Panel id="homePanel">
-        <PanelHeader separator={false}>
-          <PanelHeaderContent
-            status={
+        <PanelHeader separator={false} after={<></>}>
+          <SimpleCell
+            subtitle={
               <div className={styles.centered}>
-                Settings
+                Настройки
                 <Icon12ChevronOutline />
               </div>
             }
             before={<Avatar size={36} />}
+            hasHover={false}
+            after={
+              <IconButton hasHover={false}>
+                <Icon24LockOutline />
+              </IconButton>
+            }
           >
-            Mikhail Mateevskiy
-          </PanelHeaderContent>
+            Михаил Матеевский
+          </SimpleCell>
         </PanelHeader>
         <SafeArea>
           <BalanceBlock size="l">1000000</BalanceBlock>
