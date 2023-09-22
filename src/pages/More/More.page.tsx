@@ -13,6 +13,7 @@ import {
 } from "@vkontakte/vkui";
 import {
   Icon20HeadphonesSupportOutline,
+  Icon20InfoCircleOutline,
   Icon24ColorPickerOutline,
   Icon24DocumentTextOutline,
   Icon24MoneySendOutline,
@@ -26,6 +27,7 @@ import {
 } from "@vkontakte/icons";
 
 import styles from "./More.module.css";
+import { TextTooltip } from "@vkontakte/vkui/dist/components/TextTooltip/TextTooltip";
 
 export const MorePage: FC<ViewPageWithId> = ({ id }) => {
   return (
@@ -59,6 +61,7 @@ export const MorePage: FC<ViewPageWithId> = ({ id }) => {
                 hasHover={false}
                 after={<Switch />}
                 before={<Icon24MoneyRequestOutline />}
+                Component="label"
               >
                 Входящие переводы
               </SimpleCell>
@@ -66,15 +69,24 @@ export const MorePage: FC<ViewPageWithId> = ({ id }) => {
                 hasHover={false}
                 after={<Switch />}
                 before={<Icon24MoneySendOutline />}
+                Component="label"
               >
                 Исходящие переводы
               </SimpleCell>
             </PalletBlock>
             <PalletBlock header="Безопасность">
-            <SimpleCell
+              <SimpleCell
                 hasHover={false}
                 after={"Установлен"}
                 before={<Icon28PincodeLockOutline width={24} height={24} />}
+                indicator={
+                  <TextTooltip
+                    style={{ maxWidth: "min(calc(100% - 40px), 320px)" }}
+                    text="Тут краткое описание для чего нужен пин-код и как он спасет человека от кражи монет"
+                  >
+                    <Icon20InfoCircleOutline />
+                  </TextTooltip>
+                }
               >
                 Пин-код
               </SimpleCell>
