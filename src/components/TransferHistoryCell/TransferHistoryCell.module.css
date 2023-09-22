@@ -1,0 +1,21 @@
+.wrapper {
+  padding: 0 4px;
+  border-radius: var(--app_border_radius);
+}
+
+.sum_positive {
+  color: var(--vkui--color_text_positive);
+}
+
+.sum_negative {
+  color: var(--vkui--color_text_negative);
+}
+
+.sum_neutral {
+  color: var(--vkui--color_text_primary);
+}
+
+.userName {
+  font-weight: 500;
+  font-size: 14px;
+}

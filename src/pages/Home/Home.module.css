@@ -12,6 +12,6 @@
   padding: 0;
 }
 
-:global(.vkuiPanel#homePanel) :global(.vkuiPanelHeader__after) {
-  display: none;
+:global(.vkuiPanel#homePanel) :global(.vkuiSearch) {
+  padding: 0;
 }

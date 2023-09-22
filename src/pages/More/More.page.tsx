@@ -1,9 +1,6 @@
-import cx from "classnames";
-
 import { FC } from "react";
 import { ViewPageWithId } from "../../types/general";
 import {
-  Footnote,
   Panel,
   PanelHeader,
   PanelHeaderContent,
@@ -11,6 +8,7 @@ import {
   Switch,
   View,
 } from "@vkontakte/vkui";
+import { TextTooltip } from "@vkontakte/vkui/dist/components/TextTooltip/TextTooltip";
 import {
   Icon20HeadphonesSupportOutline,
   Icon20InfoCircleOutline,
@@ -19,15 +17,18 @@ import {
   Icon24MoneySendOutline,
   Icon24MoreHorizontal,
   Icon28PincodeLockOutline,
-} from "@vkontakte/icons";
-import { GapBlock, PalletBlock, SafeArea } from "../../components";
-import {
   Icon24HieroglyphCharacterOutline,
   Icon24MoneyRequestOutline,
 } from "@vkontakte/icons";
 
+import {
+  CustomFootnote,
+  GapBlock,
+  PalletBlock,
+  SafeArea,
+} from "../../components";
+
 import styles from "./More.module.css";
-import { TextTooltip } from "@vkontakte/vkui/dist/components/TextTooltip/TextTooltip";
 
 export const MorePage: FC<ViewPageWithId> = ({ id }) => {
   return (
@@ -107,7 +108,7 @@ export const MorePage: FC<ViewPageWithId> = ({ id }) => {
                 Пользовательское соглашение
               </SimpleCell>
             </PalletBlock>
-            <Footnote className={styles.version}>Версия: 0.01 (beta)</Footnote>
+            <CustomFootnote>Версия: 0.01 (beta)</CustomFootnote>
           </GapBlock>
         </SafeArea>
       </Panel>

@@ -12,6 +12,8 @@ import {
 } from "./BalanceBlock.props";
 
 import styles from "./BalanceBlock.module.css";
+import { GapBlock } from "../GapBlock";
+import { Tappable, Text } from "@vkontakte/vkui";
 
 const SIZES_WITH_TITLE = ["l"];
 
@@ -21,14 +23,14 @@ export const BalanceBlockAction: FC<BalanceBlockActionTypes> = ({
   onClick = () => {},
 }) => {
   return (
-    <div className={styles.action} onClick={onClick}>
+    <Tappable hasHover={false} className={styles.action} onClick={onClick}>
       {icon ? <div className={styles.action__icon}>{icon}</div> : null}
       {children ? (
         <div className={styles.action__text}>
-          <span className={styles.action__text_in}>{children}</span>
+          <Text className={styles.action__text_in}>{children}</Text>
         </div>
       ) : null}
-    </div>
+    </Tappable>
   );
 };
 
@@ -39,23 +41,26 @@ export const BalanceBlock: FC<BalanceBlockProps> = ({
   actions,
 }) => {
   return (
-    <div
+    <GapBlock
+      gap={12}
       className={cx(styles.wrapper, {
         [className]: className,
         [styles[`wrapper--size-${size}`]]: size,
         [styles["wrapper--with-actions"]]: actions && actions.length > 0,
       })}
     >
-      {SIZES_WITH_TITLE.includes(size) ? (
-        <div className={styles.title}>
-          <span className={styles.title__in}>баланс:</span>
-        </div>
-      ) : null}
+      <div className={styles.wrapper__in}>
+        {SIZES_WITH_TITLE.includes(size) ? (
+          <div className={styles.title}>
+            <span className={styles.title__in}>баланс:</span>
+          </div>
+        ) : null}
 
-      <div className={styles.count}>
-        <div className={styles.count__text}>
-          <span className={styles.count__in}>{formatNumber(children)}</span>
-          <CoinIcon className={styles.count__icon} />
+        <div className={styles.count}>
+          <div className={styles.count__text}>
+            <span className={styles.count__in}>{formatNumber(children)}</span>
+            <CoinIcon className={styles.count__icon} />
+          </div>
         </div>
       </div>
 
@@ -66,6 +71,6 @@ export const BalanceBlock: FC<BalanceBlockProps> = ({
           })}
         </div>
       ) : null}
-    </div>
+    </GapBlock>
   );
 };

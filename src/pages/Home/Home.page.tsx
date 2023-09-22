@@ -1,18 +1,30 @@
 import { FC } from "react";
 
-import { Icon12ChevronOutline, Icon24LockOutline } from "@vkontakte/icons";
+import {
+  Icon12ChevronOutline,
+  Icon24LockOutline,
+  Icon28MoneyRequestOutline,
+  Icon28MoneySendOutline,
+} from "@vkontakte/icons";
 import {
   Avatar,
   IconButton,
   Panel,
   PanelHeader,
+  Search,
   SimpleCell,
   View,
 } from "@vkontakte/vkui";
 
 import { ViewPageWithId } from "../../types/general";
 
-import { BalanceBlock, SafeArea } from "../../components";
+import {
+  BalanceBlock,
+  CustomFootnote,
+  GapBlock,
+  SafeArea,
+  TransferHistoryCell,
+} from "../../components";
 
 import styles from "./Home.module.css";
 
@@ -39,8 +51,38 @@ export const HomePage: FC<ViewPageWithId> = ({ id }) => {
             Михаил Матеевский
           </SimpleCell>
         </PanelHeader>
-        <SafeArea>
-          <BalanceBlock size="l">1000000</BalanceBlock>
+        <SafeArea className={styles.wrapper}>
+          <GapBlock gap={24}>
+            <BalanceBlock
+              size="l"
+              actions={[
+                {
+                  icon: <Icon28MoneySendOutline />,
+                  children: "Отправить",
+                },
+                {
+                  icon: <Icon28MoneyRequestOutline />,
+                  children: "Получить",
+                },
+              ]}
+            >
+              1000000
+            </BalanceBlock>
+            <Search />
+            {/* <CustomFootnote className={styles.footNote}>
+              Ничего не найдено
+            </CustomFootnote> */}
+            <TransferHistoryCell
+              transferData={{
+                id: 1,
+                status: "progress",
+                type: "remove",
+                category: "transfer",
+                sum: 10199.12,
+                userData: { id: 1 },
+              }}
+            />
+          </GapBlock>
         </SafeArea>
       </Panel>
     </View>
