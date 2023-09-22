@@ -11,10 +11,9 @@ import {
 
 import { ViewPageWithId } from "../../types/general";
 
-import { ItemBlock, SafeArea } from "../../components";
+import { BalanceBlock, SafeArea } from "../../components";
 
 import styles from "./Home.module.css";
-import { BalanceBlock } from "../../components/BalanceBlock";
 
 export const HomePage: FC<ViewPageWithId> = ({ id }) => {
   return (

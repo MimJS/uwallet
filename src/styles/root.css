@@ -1,3 +1,6 @@
 body {
   --app_border_radius: 12px;
+
+  /* VKUI Color scheme change */
+  --vkui--color_icon_accent: var(--vkui--color_text_secondary) !important;
 }
