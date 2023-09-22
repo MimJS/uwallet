@@ -19,6 +19,7 @@ export const PATHS_SUB = {
     HOME: "home",
     MENU: "menu",
     PAYMENTS: "payments",
+    REQUESTS: "requests",
   },
 } as const;
 

@@ -16,7 +16,7 @@ export const VKUIRootWrapper: FC<VKUIWrapperProps> = ({ children }) => {
 
   return (
     <ConfigProvider>
-      <AdaptivityProvider>{children}</AdaptivityProvider>
+      <AdaptivityProvider hasPointer={false}>{children}</AdaptivityProvider>
     </ConfigProvider>
   );
 };

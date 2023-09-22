@@ -4,6 +4,7 @@ export interface TransferUserData {
 
 export interface TransferData {
   id: number;
+  date: number;
   status: "completed" | "progress" | "error";
   type: "add" | "remove";
   category: "transfer" | "gift";

@@ -3,7 +3,7 @@ import { FC } from "react";
 import { useParams } from "react-router-dom";
 import { MainTabbar } from "../../components";
 import { PATHS_SUB } from "../../router/router.config";
-import { HomePage, MorePage } from "../../pages";
+import { HomePage, MorePage, TransferMenuPage } from "../../pages";
 
 export const MainPageWrapper: FC = () => {
   const { activeTabbar } = useParams();
@@ -17,6 +17,7 @@ export const MainPageWrapper: FC = () => {
     >
       <HomePage id={PATHS_SUB.MAIN.HOME} />
       <MorePage id={PATHS_SUB.MAIN.MENU} />
+      <TransferMenuPage id={PATHS_SUB.MAIN.PAYMENTS} />
     </Epic>
   );
 };

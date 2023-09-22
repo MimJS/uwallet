@@ -5,6 +5,7 @@ import {
   Icon24LockOutline,
   Icon28MoneyRequestOutline,
   Icon28MoneySendOutline,
+  Icon28UserIncomingOutline,
 } from "@vkontakte/icons";
 import {
   Avatar,
@@ -64,6 +65,10 @@ export const HomePage: FC<ViewPageWithId> = ({ id }) => {
                   icon: <Icon28MoneyRequestOutline />,
                   children: "Получить",
                 },
+                {
+                  icon: <Icon28UserIncomingOutline />,
+                  children: "Запросить",
+                },
               ]}
             >
               1000000
@@ -75,6 +80,7 @@ export const HomePage: FC<ViewPageWithId> = ({ id }) => {
             <TransferHistoryCell
               transferData={{
                 id: 1,
+                date: 0,
                 status: "progress",
                 type: "remove",
                 category: "transfer",

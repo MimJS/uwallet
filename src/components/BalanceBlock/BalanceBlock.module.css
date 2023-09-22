@@ -54,6 +54,8 @@
   transform: scale(0.95);
 }
 
-.action__text {
-    margin-top: 4px;
+.action__text > :global(.vkuiText) {
+  margin-top: 4px;
+  font-size: 14px !important;
+  color: var(--vkui--color_text_secondary);
 }
