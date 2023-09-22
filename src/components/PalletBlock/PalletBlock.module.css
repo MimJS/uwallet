@@ -1,0 +1,5 @@
+.wrapper {
+    background-color: var(--vkui--color_background_secondary);
+    border-radius: var(--app_border_radius);
+    padding-bottom: 12px;
+}
