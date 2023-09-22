@@ -24,3 +24,9 @@
   font-size: 32px;
   font-weight: 500;
 }
+
+.wrapper {
+  padding: 18px 12px;
+  background: var(--vkui--color_background_secondary);
+  border-radius: var(--app_border_radius);
+}
