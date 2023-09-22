@@ -28,7 +28,7 @@ import {
   SafeArea,
 } from "../../components";
 
-import styles from "./More.module.css";
+import "./More.module.css";
 
 export const MorePage: FC<ViewPageWithId> = ({ id }) => {
   return (
